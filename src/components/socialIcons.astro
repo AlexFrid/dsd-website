@@ -1,0 +1,21 @@
+---
+import {socials} from '../config';
+import { Icon } from 'astro-icon';
+---
+
+<ul class="list-none flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
+    {
+        socials.map((social) => (
+        <li class="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300">
+            <a
+                href={social.url}
+                target="_blank"
+                rel="noopener"
+                title={`Open ${social.name} profile`}
+            >
+            <Icon name={social.icon} width="24px" height="24px" />
+            </a>
+        </li>
+    ))
+    }
+</ul>
