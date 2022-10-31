@@ -1,9 +1,45 @@
 ---
 const today = new Date();
+import {SITE_TITLE} from '../config';
+import { Icon } from 'astro-icon';
+
+const footerSocials = [
+  {
+    name: 'Github',
+    url: 'https://github.com/AlexFrid',
+    icon: "mdi:github",
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/alexanderfridriksson',
+    icon: "mdi:linkedin",
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/DataStoryDesign',
+    icon: "mdi:twitter",
+  },
+]
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="grid justify-items-center">
+	&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
+	<ul class="list-none flex space-x-4 pt-5">
+		{
+		  footerSocials.map((social) => (
+			<li class="">
+			  <a
+				href={social.url}
+				target="_blank"
+				rel="noopener"
+				title={`Open ${social.name} profile`}
+			  >
+				<Icon name={social.icon} width="24px" height="24px" />
+			  </a>
+			</li>
+		  ))
+		}
+	  </ul>
 </footer>
 <style>
 	footer {
