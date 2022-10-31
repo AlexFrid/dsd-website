@@ -5,4 +5,7 @@ module.exports = {
 		extend: {},
 	},
 	plugins: [],
+	// corePlugins: {
+	// 	preflight: false, // disables the css reset from tailwind
+	// }
 }
