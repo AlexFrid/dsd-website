@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE} from '../config';
 import SocialIcons from './socialIcons.astro';
+import ThemeSwitch from './ThemeSwitch.svelte';
 ---
 
 <header>
@@ -33,6 +34,7 @@ import SocialIcons from './socialIcons.astro';
 						<!-- <a href="/blog" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">blog</a> -->
 						<a href="/about" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">about</a>
 					</div>
+					<ThemeSwitch client:load />
 					<SocialIcons />
 				</div>
 			</div>
@@ -47,3 +49,14 @@ import SocialIcons from './socialIcons.astro';
 		margin: 0.5em 0;
 	}
 </style>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script is:inline>
+	const root = document.documentElement;
+	const theme = localStorage.getItem('theme');
+	if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		root.classList.add('dark');
+	} else {
+		root.classList.remove('dark');
+	}
+</script>

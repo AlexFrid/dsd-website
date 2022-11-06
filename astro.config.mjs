@@ -9,7 +9,10 @@ import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
+import svelte from "@astrojs/svelte";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://datastorydesign.com',
-  integrations: [mdx(), sitemap(), tailwind(), alpinejs()]
+  integrations: [mdx(), sitemap(), tailwind(), alpinejs(), svelte()]
 });
