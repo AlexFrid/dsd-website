@@ -1,11 +1,10 @@
 ---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { Icon } from 'astro-icon';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import BaseButton from '../components/BaseButton.astro';
-import { Icon } from 'astro-icon';
-
 ---
 
 <!DOCTYPE html>
@@ -193,20 +192,20 @@ import { Icon } from 'astro-icon';
 			</section>
 			<section>
 				<div class="container px-6 py-10 mx-auto">
-					<h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Portfolio
-					</h1>
+					<h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">See Me in Action</h1>
 			
 					<p class="mt-4 text-center text-gray-500 dark:text-gray-300">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+						In this 5 minute video, I talk about the creative process for making good analytics dashboards
 					</p>
-			
-			
 					<div class="grid grid-cols-1 gap-8 mt-8">
-						<div>
-							<img class="object-cover w-full rounded-lg h-96 "
-								src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80"
-								alt="">
-						</div>
+						<a class="" href="https://www.youtube.com/watch?v=2UtLa_LUkR4" target="_blank" rel="noopener noreferrer">
+							<div class="relative">
+								<Icon class="absolute z-10 top-[50%] left-[45%] " name="bi:play-btn-fill" width="100px" height="100px" />
+								<img class="object-cover w-1/2 mx-auto rounded-lg h-96 "
+									src="../images/public-speaking.png"
+									alt="public-speaking">
+							</div>
+						</a>
 					</div>	
 				</div>
 			</section>
