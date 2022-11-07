@@ -8,7 +8,7 @@ module.exports = {
 		},
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography'),],
 	// corePlugins: {
 	// 	preflight: false, // disables the css reset from tailwind
 	// }
