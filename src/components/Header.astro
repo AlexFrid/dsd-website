@@ -34,8 +34,10 @@ import ThemeSwitch from './ThemeSwitch.svelte';
 						<!-- <a href="/blog" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">blog</a> -->
 						<a href="/about" class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">about</a>
 					</div>
-					<ThemeSwitch client:load />
-					<SocialIcons />
+					<div class="flex items-center justify-between">
+						<SocialIcons />
+						<ThemeSwitch client:load />
+					</div>
 				</div>
 			</div>
 		</div>
