@@ -17,6 +17,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/svelte": "^1.0.2",
     "@astrojs/tailwind": "^2.1.1",
+    "@fontsource/caveat": "^4.5.9",
     "@types/alpinejs": "^3.7.1",
     "alpinejs": "^3.10.5",
     "astro": "^1.6.0",
