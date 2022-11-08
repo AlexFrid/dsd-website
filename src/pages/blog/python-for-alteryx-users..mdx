@@ -11,10 +11,10 @@ tags: ['Data']
 
 We will recreate this Alteryx workflow using Python
 
-![Alteryx workflow](../images/python-for-alteryx-users/Alteryx_workflow.png)
+![Alteryx workflow](../../images/python-for-alteryx-users/Alteryx_workflow.png)
 
 ## Text input
-![Text Input](../images/python-for-alteryx-users/text-input.png)
+![Text Input](../../images/python-for-alteryx-users/text-input.png)
 
 ```python
 import pandas as pd
@@ -54,7 +54,7 @@ text_input
 
 
 ## Input data
-![Input data](../images/python-for-alteryx-users/normal-input.png)
+![Input data](../../images/python-for-alteryx-users/normal-input.png)
 
 ```python
 import pandas as pd
@@ -210,7 +210,7 @@ input_data.head()
 
 
 ## Select tool
-![Select tool](../images/python-for-alteryx-users/select.png)
+![Select tool](../../images/python-for-alteryx-users/select.png)
 
 ```python
 selected_data = (
@@ -287,7 +287,7 @@ selected_data.head()
 
 
 ## Formula tool
-![Formula tool](../images/python-for-alteryx-users/formula.png)
+![Formula tool](../../images/python-for-alteryx-users/formula.png)
 
 ```python
 selected_data["Total Sales"] = selected_data["Sales"] * selected_data["Quantity"]
@@ -364,7 +364,7 @@ selected_data.head()
 
 
 ## Filter tool
-![Filter tool](../images/python-for-alteryx-users/filter.png)
+![Filter tool](../../images/python-for-alteryx-users/filter.png)
 
 ```python
 filtered_data = selected_data[selected_data["Sales"] > 1000]
@@ -518,7 +518,7 @@ sales_under_1000.head()
 
 
 ## Sort tool
-![Sort tool](../images/python-for-alteryx-users/sort.png)
+![Sort tool](../../images/python-for-alteryx-users/sort.png)
 
 ```python
 sorted_data = filtered_data.sort_values(by="Sales", ascending=False)
@@ -595,7 +595,7 @@ sorted_data.head()
 
 
 ## Summarize tool
-![Summarize tool](../images/python-for-alteryx-users/summarize.png)
+![Summarize tool](../../images/python-for-alteryx-users/summarize.png)
 
 
 ```python
@@ -705,7 +705,7 @@ summarized_data_alternative.head()
 
 
 ## Join tool
-![Join tool](../images/python-for-alteryx-users/join.png)
+![Join tool](../../images/python-for-alteryx-users/join.png)
 
 
 ```python
@@ -820,7 +820,7 @@ left_join.head()
 
 
 ## Union tool
-![Union tool](../images/python-for-alteryx-users/union.png)
+![Union tool](../../images/python-for-alteryx-users/union.png)
 
 ```python
 unioned_data = joined_data.append(sales_under_1000)
@@ -903,7 +903,7 @@ unioned_data.head()
 
 
 ## Output tool
-![Output tool](../images/python-for-alteryx-users/output.png)
+![Output tool](../../images/python-for-alteryx-users/output.png)
 
 ```python
 unioned_data.to_csv("Sales summary.csv", index=False)

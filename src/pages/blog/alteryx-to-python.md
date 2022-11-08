@@ -13,7 +13,7 @@ While I didn't end up completing it,
 I was quite happy that I was able to complete one of the tools, 
 the Alteryx make group tool.
 
-![Make Group](../images/make-groups/makegroup.jpg)
+![Make Group](../../images/make-groups/makegroup.jpg)
 
 While I had used it several times in Alteryx, I didn't really know how it worked.
 Well.. I knew the make group tool makes groups! Obviously :)
@@ -24,12 +24,12 @@ In situations like this I find the best place to start is reading the
 documentation, which in Alteryx's case its best at look at the tool examples
 found here:
 
-![Make Group example](../images/make-groups/make-groups-example-menu.PNG)
+![Make Group example](../../images/make-groups/make-groups-example-menu.PNG)
 
 
 After opening the example, we're greeted with this very helpful explanation:
 
-![Make Group explanation](../images/make-groups/make-groups-explanation.PNG)
+![Make Group explanation](../../images/make-groups/make-groups-explanation.PNG)
 
 From looking closely at this we can deduce that the make group tool
 is actually doing a few things:
@@ -119,7 +119,7 @@ Now we can call the function and get the groups
 makegroups(df)
 ```
 
-![Make Group Python](../images/make-groups/mg-python.png)
+![Make Group Python](../../images/make-groups/mg-python.png)
 
 You can find the Python file and a notebook file at:
 [https://github.com/AlexFrid/MakeGroup](https://github.com/AlexFrid/MakeGroup)
