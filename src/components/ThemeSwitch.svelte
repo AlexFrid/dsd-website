@@ -73,15 +73,9 @@
 	padding-top: 8px;
 	margin-left: 10px;
 	gap: 0.6em;
-	border-radius: 99em;
-	background-color: var(--theme-code-inline-bg);
   }
   
-  .theme-toggle > label:focus-within {
-	outline: 2px solid transparent;
-	box-shadow: 0 0 0 0.08em var(--theme-accent), 0 0 0 0.12em white;
-  }
-  
+
   .theme-toggle > label {
 	color: var(--theme-code-inline-text);
 	position: relative;
