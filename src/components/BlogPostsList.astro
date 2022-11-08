@@ -5,12 +5,13 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
 );
 ---
 
+<div class="container px-6 py-10 mx-auto">
   <ul class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
     {posts.map((post) => (
       <li class="lg:flex">
         <img class="object-cover w-full h-56 rounded-lg lg:w-64" src={post.frontmatter.heroImage} alt="">
 
-        <div class="flex flex-col justify-center py-6 lg:mx-6">
+        <div class="flex flex-col justify-between py-6 lg:mx-6">
           <a class="text-xl font-semibold hover:underline" href={post.url}>
             {post.frontmatter.title}
           </a>
@@ -25,5 +26,6 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
       </li>
     ))}
   </ul>
+</div>
 
 

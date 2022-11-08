@@ -1,0 +1,46 @@
+---
+layout: '../../layouts/BlogPost.astro'
+title: 'Read and write hyper files in Python'
+description: 'A simple way to go between Tableau hyper files and Pandas DataFrames'
+pubDate: 'Jun 17 2020'
+heroImage: '../images/tableau-to-python.png'
+---
+
+
+## Tableau Hyper IO
+A simple wrapper for the [Tableau Hyper API](https://help.tableau.com/current/api/hyper_api/en-us/index.html)
+
+[Click here to see the code on GitHub](https://github.com/AlexFrid/tableauhyperio)
+
+
+## Why was this made?
+For a project I was working on I needed to read hyper files.
+I searched if a package already existed and found only the [pandleau](https://pypi.org/project/pandleau/) package,
+which only writes to hyper files but does not read them and also uses the older extract 2.0 API.
+Since I couldn't find any other package that met my needs I decided to make one myself, which has been a good learning experience.
+
+
+## Installation
+
+You can install tableauhyperio using pip:
+```bash
+pip install tableauhyperio
+```
+This will also try downloading the Tableau hyper API, tqdm, pandas.
+
+## Example usage
+```python
+import tableauhyperio as hio
+
+# Reading a regular hyper file
+df = hio.read_hyper("example.hyper")
+
+# Reading a hyper file with a custom schema
+df = hio.read_hyper("example.hyper", "my_schema")
+
+# Writing a regular hyper file
+hio.to_hyper(df, "example_output.hyper")
+
+# Writing a hyper file with a custom schema and custom table name
+hio.to_hyper(df, "example_output.hyper", "my_schema", "my_table")
+```

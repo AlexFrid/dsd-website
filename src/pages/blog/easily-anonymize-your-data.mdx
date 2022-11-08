@@ -1,0 +1,522 @@
+---
+layout: "../../layouts/BlogPost.astro"
+title: "Easily anonymize your data"
+description: "You can do better than an md5 hash with this convenient way to anonymize your data while keeping analytical relationships"
+pubDate: "Jun 11 2020"
+heroImage: "../images/anonymize_your_data/anonymize_header.png"
+---
+
+Let's imagine two scenarios:
+- You're hiring consultants to work on your data but need to anonymize it first
+- You created something great that you want to make into a template for other people who can't see the data
+
+How would you personally go about solving this?
+
+## Anonymize df
+
+I've been confronted with these scenarios multiple times and had a very ad hoc, quick and dirty, kind of approach to it.
+Starting from scratch every time, which meant saving time in the short run but losing time and quality in the long run.
+
+When a colleague asked how complicated it would be to make a general-purpose tool for this kind of process, I saw that as an opportunity to finally do something about this and create a project for my public portfolio that is quite useful.  
+
+The result being **Anonymize df**, which is a python package and Alteryx macro that helps you quickly and easily generate realistically
+fake data from a Pandas DataFrame.
+
+
+## Where to get it
+
+You can install it like you would any other package through pip:
+
+```bash
+pip install anonymizedf
+```
+
+You can also find it here:
+
+[Link to Python code](https://github.com/AlexFrid/anonymizedf)
+
+[Link to Alteryx macro](https://gallery.alteryx.com/#!app/anonymize-df-macro/5ee240928a933711005b527a)
+
+
+## Python usage
+
+```python
+import pandas as pd
+from anonymizedf.anonymizedf import anonymize
+
+Import the data
+df = pd.read_csv("https://query.data.world/s/shcktxndtu3ojonm46tb5udlz7sp3e")
+
+Prepare the data to be anonymized
+an = anonymize(df)
+```
+
+```python
+Example 1 - just updates df
+an.fake_names("Customer Name")
+an.fake_ids("Customer ID")
+an.fake_whole_numbers("Loyalty Reward Points")
+an.fake_categories("Segment")
+an.fake_dates("Date")
+an.fake_decimal_numbers("Fraction")
+df.head()
+```
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Customer ID</th>
+      <th>Customer Name</th>
+      <th>Loyalty Reward Points</th>
+      <th>Segment</th>
+      <th>Date</th>
+      <th>Fraction</th>
+      <th>Fake_Customer Name</th>
+      <th>Fake_Customer ID</th>
+      <th>Fake_Loyalty Reward Points</th>
+      <th>Fake_Segment</th>
+      <th>Fake_Date</th>
+      <th>Fake_Fraction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AA-10315</td>
+      <td>Alex Avila</td>
+      <td>76</td>
+      <td>Consumer</td>
+      <td>01/01/2000</td>
+      <td>7.6</td>
+      <td>Anne Briggs</td>
+      <td>FYKP18464993584790</td>
+      <td>715</td>
+      <td>Segment 1</td>
+      <td>1988-02-21</td>
+      <td>81.70</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AA-10375</td>
+      <td>Allen Armold</td>
+      <td>369</td>
+      <td>Consumer</td>
+      <td>02/01/2000</td>
+      <td>36.9</td>
+      <td>Kathryn Poole-Owens</td>
+      <td>KQLT34683822176548</td>
+      <td>305</td>
+      <td>Segment 1</td>
+      <td>2012-01-21</td>
+      <td>49.64</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AA-10480</td>
+      <td>Andrew Allen</td>
+      <td>162</td>
+      <td>Consumer</td>
+      <td>03/01/2000</td>
+      <td>16.2</td>
+      <td>Dorothy Knight-Smith</td>
+      <td>KEKQ23089097589905</td>
+      <td>723</td>
+      <td>Segment 1</td>
+      <td>2017-12-05</td>
+      <td>45.49</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AA-10645</td>
+      <td>Anna Andreadi</td>
+      <td>803</td>
+      <td>Consumer</td>
+      <td>04/01/2000</td>
+      <td>80.3</td>
+      <td>Dr. Dennis Lowe</td>
+      <td>JUFR80046496812327</td>
+      <td>503</td>
+      <td>Segment 1</td>
+      <td>1993-08-19</td>
+      <td>43.85</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AB-10015</td>
+      <td>Aaron Bergman</td>
+      <td>935</td>
+      <td>Consumer</td>
+      <td>05/01/2000</td>
+      <td>93.5</td>
+      <td>Joan Read</td>
+      <td>ZLEK68784141425071</td>
+      <td>103</td>
+      <td>Segment 1</td>
+      <td>2018-10-26</td>
+      <td>65.30</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+Example 2 - method chaining
+fake_df = (
+    an
+    .fake_names("Customer Name", chaining=True)
+    .fake_ids("Customer ID", chaining=True)
+    .fake_whole_numbers("Loyalty Reward Points", chaining=True)
+    .fake_categories("Segment", chaining=True)
+    .fake_dates("Date", chaining=True)
+    .fake_decimal_numbers("Fraction", chaining=True)
+    .show_data_frame()
+)
+fake_df.head()
+```
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Customer ID</th>
+      <th>Customer Name</th>
+      <th>Loyalty Reward Points</th>
+      <th>Segment</th>
+      <th>Date</th>
+      <th>Fraction</th>
+      <th>Fake_Customer Name</th>
+      <th>Fake_Customer ID</th>
+      <th>Fake_Loyalty Reward Points</th>
+      <th>Fake_Segment</th>
+      <th>Fake_Date</th>
+      <th>Fake_Fraction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AA-10315</td>
+      <td>Alex Avila</td>
+      <td>76</td>
+      <td>Consumer</td>
+      <td>01/01/2000</td>
+      <td>7.6</td>
+      <td>Matthew Elliott</td>
+      <td>KQPQ33621304584922</td>
+      <td>62</td>
+      <td>Segment 1</td>
+      <td>2011-05-24</td>
+      <td>96.96</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AA-10375</td>
+      <td>Allen Armold</td>
+      <td>369</td>
+      <td>Consumer</td>
+      <td>02/01/2000</td>
+      <td>36.9</td>
+      <td>Lynne Harding</td>
+      <td>CLAA15849783691822</td>
+      <td>494</td>
+      <td>Segment 1</td>
+      <td>2000-10-14</td>
+      <td>20.78</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AA-10480</td>
+      <td>Andrew Allen</td>
+      <td>162</td>
+      <td>Consumer</td>
+      <td>03/01/2000</td>
+      <td>16.2</td>
+      <td>Dr. Molly Holmes</td>
+      <td>VTWU51877283324210</td>
+      <td>383</td>
+      <td>Segment 1</td>
+      <td>1994-01-30</td>
+      <td>66.87</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AA-10645</td>
+      <td>Anna Andreadi</td>
+      <td>803</td>
+      <td>Consumer</td>
+      <td>04/01/2000</td>
+      <td>80.3</td>
+      <td>Mr. Frederick Price</td>
+      <td>MVFX95041828905565</td>
+      <td>82</td>
+      <td>Segment 1</td>
+      <td>2000-01-11</td>
+      <td>25.77</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AB-10015</td>
+      <td>Aaron Bergman</td>
+      <td>935</td>
+      <td>Consumer</td>
+      <td>05/01/2000</td>
+      <td>93.5</td>
+      <td>Dean Davies</td>
+      <td>CRXZ11641101775380</td>
+      <td>786</td>
+      <td>Segment 1</td>
+      <td>1996-08-19</td>
+      <td>38.32</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+Example 4 - for multiple columns
+
+column_list = ["Segment", "Customer Name", "Customer ID", "Date"]
+
+for column in column_list:
+     an.fake_categories(column)
+df.head()
+```
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Customer ID</th>
+      <th>Customer Name</th>
+      <th>Loyalty Reward Points</th>
+      <th>Segment</th>
+      <th>Date</th>
+      <th>Fraction</th>
+      <th>Fake_Customer Name</th>
+      <th>Fake_Customer ID</th>
+      <th>Fake_Loyalty Reward Points</th>
+      <th>Fake_Segment</th>
+      <th>Fake_Date</th>
+      <th>Fake_Fraction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AA-10315</td>
+      <td>Alex Avila</td>
+      <td>76</td>
+      <td>Consumer</td>
+      <td>01/01/2000</td>
+      <td>7.6</td>
+      <td>Customer Name 1</td>
+      <td>Customer ID 1</td>
+      <td>62</td>
+      <td>Segment 1</td>
+      <td>Date 1</td>
+      <td>96.96</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AA-10375</td>
+      <td>Allen Armold</td>
+      <td>369</td>
+      <td>Consumer</td>
+      <td>02/01/2000</td>
+      <td>36.9</td>
+      <td>Customer Name 2</td>
+      <td>Customer ID 2</td>
+      <td>494</td>
+      <td>Segment 1</td>
+      <td>Date 2</td>
+      <td>20.78</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AA-10480</td>
+      <td>Andrew Allen</td>
+      <td>162</td>
+      <td>Consumer</td>
+      <td>03/01/2000</td>
+      <td>16.2</td>
+      <td>Customer Name 3</td>
+      <td>Customer ID 3</td>
+      <td>383</td>
+      <td>Segment 1</td>
+      <td>Date 3</td>
+      <td>66.87</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AA-10645</td>
+      <td>Anna Andreadi</td>
+      <td>803</td>
+      <td>Consumer</td>
+      <td>04/01/2000</td>
+      <td>80.3</td>
+      <td>Customer Name 4</td>
+      <td>Customer ID 4</td>
+      <td>82</td>
+      <td>Segment 1</td>
+      <td>Date 4</td>
+      <td>25.77</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AB-10015</td>
+      <td>Aaron Bergman</td>
+      <td>935</td>
+      <td>Consumer</td>
+      <td>05/01/2000</td>
+      <td>93.5</td>
+      <td>Customer Name 5</td>
+      <td>Customer ID 5</td>
+      <td>786</td>
+      <td>Segment 1</td>
+      <td>Date 5</td>
+      <td>38.32</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+Example 5 - grouping
+
+d2 = {"category": ["low", "low", "high", "high"], "number": [0.1, 1, 10.1, 100.1]}
+df2 = pd.DataFrame(data=d2)
+
+an = anonymize(df2)
+df2.head()
+```
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>category</th>
+      <th>number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>low</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>low</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>high</td>
+      <td>10.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>high</td>
+      <td>100.1</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+Without grouping - relative relationships lost when generating fake data
+an.fake_decimal_numbers("number")
+df2.head()
+```
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>category</th>
+      <th>number</th>
+      <th>Fake_number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>low</td>
+      <td>0.1</td>
+      <td>86.03</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>low</td>
+      <td>1.0</td>
+      <td>64.72</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>high</td>
+      <td>10.1</td>
+      <td>68.66</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>high</td>
+      <td>100.1</td>
+      <td>13.41</td>
+    </tr>
+  </tbody>
+</table>
+
+```python
+With grouping - relative relationships remain the same
+an.fake_decimal_numbers("number", "category")
+df2.head()
+```
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>category</th>
+      <th>number</th>
+      <th>Fake_number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>low</td>
+      <td>0.1</td>
+      <td>0.38</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>low</td>
+      <td>1.0</td>
+      <td>0.92</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>high</td>
+      <td>10.1</td>
+      <td>63.70</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>high</td>
+      <td>100.1</td>
+      <td>59.40</td>
+    </tr>
+  </tbody>
+</table>
+
+## Alteryx usage
+
+
+The Macro can be downloaded from the [gallery](https://gallery.alteryx.com/#!app/anonymize-df-macro/5ee240928a933711005b527a) and used just like any other macro
+
+![Workflow overview](../images/anonymize_your_data/anon_workflow_example.png)
+
+
+The interface for using the macro should be quite straightforward, if not let me know ;)
+
+![interface example](../images/anonymize_your_data/anon_interface_example.png)
+
+
+If you have any thoughts / comments feel free to let me know
+
+Also let me know if you'd be interested in a "behind the scenes" post / video about how this was created.
