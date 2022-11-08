@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/story/2020/12/02/lessons-learned-working-as-a-consultant.html"
+  to = "/blog/lessons-learned-working-as-a-consultant"
+  status = 301
+
+[[redirects]]
+  from = "/alteryx/python/2020/02/01/alteryx-to-python.html"
+  to = "/blog/alteryx-to-python/"
+  status = 301
