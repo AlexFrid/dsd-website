@@ -15,13 +15,13 @@ import BaseButton from '../components/BaseButton.astro';
 		<main>
 			<section class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
 				<div class="w-full lg:w-1/2">
-					<div class="lg:max-w-lg">
-						<h1 class="text-3xl font-bold tracking-wide text-gray-600 dark:text-white lg:text-5xl">
+					<div class="lg:max-w-lg text-center lg:text-left">
+						<h1 class="text-4xl font-bold tracking-wide text-gray-600 dark:text-white lg:text-5xl">
 							<span class="text-sky-600 dark:text-sky-400">Hi I'm Alexander</span><br> your friendly neighbourhood<br>analytics engineer
 						</h1>
 						<div class="mt-8 mr-3 space-y-5">
-							<p class="mt-2 text-sm text-gray-500 dark:text-gray-400 lg:text-base">I value simplicity, curiosity and automation.<br>If you share those values then <a class="underline" href="mailto:post@alexanderfridriksson.com">get in touch! <Icon class="ml-1 inline" name="ic:outline-email" width="24px" height="24px" /></a></p>
-							<div class="flex space-x-5">
+							<p class="mt-2 text-gray-500 dark:text-gray-400 ">I value simplicity, curiosity and automation.<br>If you share those values then <a class="underline" href="mailto:post@alexanderfridriksson.com">get in touch! <Icon class="ml-1 inline" name="ic:outline-email" width="24px" height="24px" /></a></p>
+							<div class="flex space-x-5 justify-center lg:justify-start">
 								<BaseButton> <a href="./blog">Read blog posts</a> </BaseButton>
 								<BaseButton> <a href="https://drive.google.com/uc?id=15VxLhBztX0rP5XGMdGCFDBJOiLOjoRIg&export=download">Download CV</a> </BaseButton>
 							</div>
@@ -138,14 +138,14 @@ import BaseButton from '../components/BaseButton.astro';
 							<p class="text-gray-600 dark:text-gray-300 mb-5">Self-Service Analytics Lead at Cargill</p>
 							<BaseButton><a href="https://www.linkedin.com/in/alexanderfridriksson/">Read on LinkedIn</a></BaseButton>
 						</div>
-						<img class="object-cover object-center h-[25rem]" src="../icons/presenting-results.svg" alt="adding-value">
+						<img class="object-cover object-center w-full md:w-1/2" src="../icons/presenting-results.svg" alt="adding-value">
 					</div>
 				</div>
 
 				<!-- BCG -->
 				<div class="container px-6 py-10 mx-auto">
 					<div class="lg:-mx-6 lg:flex lg:items-center">
-						<img class="object-cover object-center h-[25rem]" src="../icons/office-team-work.svg" alt="Solving-problems">
+						<img class="object-cover object-center w-full md:w-1/2" src="../icons/office-team-work.svg" alt="Solving-problems">
 						<div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
 							<p class="text-5xl font-semibold text-sky-500 ">“</p>
 
@@ -188,7 +188,7 @@ import BaseButton from '../components/BaseButton.astro';
 							<p class="text-gray-600 dark:text-gray-300 mb-5">Head of Portfolio Operations at Hg</p>
 							<BaseButton><a href="https://www.linkedin.com/in/alexanderfridriksson/">Read on LinkedIn</a></BaseButton>
 						</div>
-						<img class="object-cover object-center h-[25rem]" src="../icons/coaching.svg" alt="helping">
+						<img class="object-cover object-center w-full md:w-1/2" src="../icons/coaching.svg" alt="helping">
 					</div>
 				</div>
 
@@ -204,14 +204,14 @@ import BaseButton from '../components/BaseButton.astro';
 						<a class="" href="https://www.youtube.com/watch?v=2UtLa_LUkR4" target="_blank" rel="noopener noreferrer">
 							<div class="relative">
 								<Icon class="absolute z-10 top-[50%] left-[45%] text-white" name="bi:play-btn-fill" width="100px" height="100px" />
-								<img class="object-cover w-1/2 mx-auto rounded-lg h-96 "
+								<img class="object-cover w-full md:w-1/2 mx-auto rounded-lg h-96"
 									src="../images/public-speaking.png"
 									alt="public-speaking">
 							</div>
 						</a>
 					</div>	
 				</div>
-				<div class="flex space-x-4 justify-center">
+				<div class="flex space-x-5 justify-center">
 					<BaseButton> <a href="./blog">Read blog posts</a> </BaseButton>
 					<BaseButton> <a href="mailto:post@alexanderfridriksson.com">get in touch! <Icon class="ml-1 inline" name="ic:outline-email" width="24px" height="24px" /></a> </BaseButton>
 				</div>
