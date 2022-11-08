@@ -7,7 +7,7 @@ heroImage: "../images/alteryx-to-python.png"
 tags: ['Data']
 ---
 
-# Overview of tools
+## Overview of tools
 
 We will recreate this Alteryx workflow using Python
 
@@ -24,34 +24,34 @@ text_input = pd.DataFrame(
 )
 text_input
 ```
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Person</th>
-      <th>Number</th>
+      <td></td>
+      <td>Person</td>
+      <td>Number</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>You</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Me</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Everyone else</td>
       <td>99</td>
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Input data
 ![Input data](../images/python-for-alteryx-users/normal-input.png)
@@ -62,36 +62,36 @@ import pandas as pd
 input_data = pd.read_csv("https://query.data.world/s/whbjtalht4sigazly6hdnnb5ynqald")
 input_data.head()
 ```
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Category</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>Customer Name</th>
-      <th>Discount</th>
-      <th>Number of Records</th>
-      <th>Order Date</th>
-      <th>Order ID</th>
-      <th>Postal Code</th>
-      <th>Manufacturer</th>
-      <th>Product Name</th>
-      <th>Profit</th>
-      <th>Quantity</th>
-      <th>Region</th>
-      <th>Sales</th>
-      <th>Segment</th>
-      <th>Ship Date</th>
-      <th>Ship Mode</th>
-      <th>State</th>
-      <th>Sub-Category</th>
+      <td></td>
+      <td>Category</td>
+      <td>City</td>
+      <td>Country</td>
+      <td>Customer Name</td>
+      <td>Discount</td>
+      <td>Number of Records</td>
+      <td>Order Date</td>
+      <td>Order ID</td>
+      <td>Postal Code</td>
+      <td>Manufacturer</td>
+      <td>Product Name</td>
+      <td>Profit</td>
+      <td>Quantity</td>
+      <td>Region</td>
+      <td>Sales</td>
+      <td>Segment</td>
+      <td>Ship Date</td>
+      <td>Ship Mode</td>
+      <td>State</td>
+      <td>Sub-Category</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Furniture</td>
       <td>Henderson</td>
       <td>United States</td>
@@ -114,7 +114,7 @@ input_data.head()
       <td>Bookcases</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Furniture</td>
       <td>Henderson</td>
       <td>United States</td>
@@ -137,7 +137,7 @@ input_data.head()
       <td>Chairs</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Office Supplies</td>
       <td>Los Angeles</td>
       <td>United States</td>
@@ -160,7 +160,7 @@ input_data.head()
       <td>Labels</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Furniture</td>
       <td>Fort Lauderdale</td>
       <td>United States</td>
@@ -183,7 +183,7 @@ input_data.head()
       <td>Tables</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Office Supplies</td>
       <td>Fort Lauderdale</td>
       <td>United States</td>
@@ -207,7 +207,7 @@ input_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Select tool
 ![Select tool](../images/python-for-alteryx-users/select.png)
@@ -223,22 +223,22 @@ selected_data = (
 )
 selected_data.head()
 ```
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>CA-2017-152156</td>
       <td>Furniture</td>
       <td>Bookcases</td>
@@ -247,7 +247,7 @@ selected_data.head()
       <td>2</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>CA-2017-152156</td>
       <td>Furniture</td>
       <td>Chairs</td>
@@ -256,7 +256,7 @@ selected_data.head()
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>CA-2017-138688</td>
       <td>Office Supplies</td>
       <td>Labels</td>
@@ -265,7 +265,7 @@ selected_data.head()
       <td>2</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>US-2016-108966</td>
       <td>Furniture</td>
       <td>Tables</td>
@@ -274,7 +274,7 @@ selected_data.head()
       <td>5</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>US-2016-108966</td>
       <td>Office Supplies</td>
       <td>Storage</td>
@@ -284,7 +284,7 @@ selected_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Formula tool
 ![Formula tool](../images/python-for-alteryx-users/formula.png)
@@ -294,23 +294,23 @@ selected_data["Total Sales"] = selected_data["Sales"] * selected_data["Quantity"
 selected_data.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
-      <th>Total Sales</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
+      <td>Total Sales</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>CA-2017-152156</td>
       <td>Furniture</td>
       <td>Bookcases</td>
@@ -320,7 +320,7 @@ selected_data.head()
       <td>523.9200</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>CA-2017-152156</td>
       <td>Furniture</td>
       <td>Chairs</td>
@@ -330,7 +330,7 @@ selected_data.head()
       <td>2195.8200</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>CA-2017-138688</td>
       <td>Office Supplies</td>
       <td>Labels</td>
@@ -340,7 +340,7 @@ selected_data.head()
       <td>29.2400</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>US-2016-108966</td>
       <td>Furniture</td>
       <td>Tables</td>
@@ -350,7 +350,7 @@ selected_data.head()
       <td>4787.8875</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>US-2016-108966</td>
       <td>Office Supplies</td>
       <td>Storage</td>
@@ -361,7 +361,7 @@ selected_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Filter tool
 ![Filter tool](../images/python-for-alteryx-users/filter.png)
@@ -375,23 +375,23 @@ sales_under_1000 = selected_data[selected_data["Sales"] < 1000]
 
 filtered_data.head()
 ```
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
-      <th>Total Sales</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
+      <td>Total Sales</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>10</th>
+      <td>10</td>
       <td>CA-2015-115812</td>
       <td>Furniture</td>
       <td>Tables</td>
@@ -401,7 +401,7 @@ filtered_data.head()
       <td>15355.656</td>
     </tr>
     <tr>
-      <th>24</th>
+      <td>24</td>
       <td>CA-2016-106320</td>
       <td>Furniture</td>
       <td>Tables</td>
@@ -411,7 +411,7 @@ filtered_data.head()
       <td>3133.890</td>
     </tr>
     <tr>
-      <th>27</th>
+      <td>27</td>
       <td>US-2016-150630</td>
       <td>Furniture</td>
       <td>Bookcases</td>
@@ -421,7 +421,7 @@ filtered_data.head()
       <td>21584.010</td>
     </tr>
     <tr>
-      <th>35</th>
+      <td>35</td>
       <td>CA-2017-117590</td>
       <td>Technology</td>
       <td>Phones</td>
@@ -431,7 +431,7 @@ filtered_data.head()
       <td>7682.808</td>
     </tr>
     <tr>
-      <th>54</th>
+      <td>54</td>
       <td>CA-2017-105816</td>
       <td>Technology</td>
       <td>Phones</td>
@@ -442,29 +442,29 @@ filtered_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ```python
 sales_under_1000.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
-      <th>Total Sales</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
+      <td>Total Sales</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>CA-2017-152156</td>
       <td>Furniture</td>
       <td>Bookcases</td>
@@ -474,7 +474,7 @@ sales_under_1000.head()
       <td>523.9200</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>CA-2017-152156</td>
       <td>Furniture</td>
       <td>Chairs</td>
@@ -484,7 +484,7 @@ sales_under_1000.head()
       <td>2195.8200</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>CA-2017-138688</td>
       <td>Office Supplies</td>
       <td>Labels</td>
@@ -494,7 +494,7 @@ sales_under_1000.head()
       <td>29.2400</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>US-2016-108966</td>
       <td>Furniture</td>
       <td>Tables</td>
@@ -504,7 +504,7 @@ sales_under_1000.head()
       <td>4787.8875</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>US-2016-108966</td>
       <td>Office Supplies</td>
       <td>Storage</td>
@@ -515,7 +515,7 @@ sales_under_1000.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Sort tool
 ![Sort tool](../images/python-for-alteryx-users/sort.png)
@@ -525,23 +525,23 @@ sorted_data = filtered_data.sort_values(by="Sales", ascending=False)
 sorted_data.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
-      <th>Total Sales</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
+      <td>Total Sales</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>9941</th>
+      <td>9941</td>
       <td>CA-2015-145317</td>
       <td>Technology</td>
       <td>Machines</td>
@@ -551,7 +551,7 @@ sorted_data.head()
       <td>135830.880</td>
     </tr>
     <tr>
-      <th>8093</th>
+      <td>8093</td>
       <td>CA-2017-118689</td>
       <td>Technology</td>
       <td>Copiers</td>
@@ -561,7 +561,7 @@ sorted_data.head()
       <td>87499.750</td>
     </tr>
     <tr>
-      <th>4905</th>
+      <td>4905</td>
       <td>CA-2018-140151</td>
       <td>Technology</td>
       <td>Copiers</td>
@@ -571,7 +571,7 @@ sorted_data.head()
       <td>55999.840</td>
     </tr>
     <tr>
-      <th>9707</th>
+      <td>9707</td>
       <td>CA-2018-127180</td>
       <td>Technology</td>
       <td>Copiers</td>
@@ -581,7 +581,7 @@ sorted_data.head()
       <td>44799.872</td>
     </tr>
     <tr>
-      <th>5297</th>
+      <td>5297</td>
       <td>CA-2018-166709</td>
       <td>Technology</td>
       <td>Copiers</td>
@@ -592,7 +592,7 @@ sorted_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Summarize tool
 ![Summarize tool](../images/python-for-alteryx-users/summarize.png)
@@ -607,50 +607,50 @@ summarized_data = (
 summarized_data.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Sales by Sub-Cat</th>
+      <td></td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Sales by Sub-Cat</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Furniture</td>
       <td>Bookcases</td>
       <td>49521.8256</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Furniture</td>
       <td>Chairs</td>
       <td>129547.8520</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Furniture</td>
       <td>Furnishings</td>
       <td>5638.9320</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Furniture</td>
       <td>Tables</td>
       <td>102125.0490</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Office Supplies</td>
       <td>Appliances</td>
       <td>36742.7900</td>
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ```python
 summarized_data_alternative = sorted_data.groupby(["Category", "Sub-Cat"]).agg(
@@ -659,50 +659,50 @@ summarized_data_alternative = sorted_data.groupby(["Category", "Sub-Cat"]).agg(
 summarized_data_alternative.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Sales_by_Sub_Cat</th>
+      <td></td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Sales_by_Sub_Cat</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Furniture</td>
       <td>Bookcases</td>
       <td>49521.8256</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Furniture</td>
       <td>Chairs</td>
       <td>129547.8520</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Furniture</td>
       <td>Furnishings</td>
       <td>5638.9320</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Furniture</td>
       <td>Tables</td>
       <td>102125.0490</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Office Supplies</td>
       <td>Appliances</td>
       <td>36742.7900</td>
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Join tool
 ![Join tool](../images/python-for-alteryx-users/join.png)
@@ -715,24 +715,24 @@ joined_data = pd.merge(
 joined_data.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
-      <th>Total Sales</th>
-      <th>Sales by Sub-Cat</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
+      <td>Total Sales</td>
+      <td>Sales by Sub-Cat</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>CA-2015-145317</td>
       <td>Technology</td>
       <td>Machines</td>
@@ -743,7 +743,7 @@ joined_data.head()
       <td>162022.19</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>US-2017-107440</td>
       <td>Technology</td>
       <td>Machines</td>
@@ -754,7 +754,7 @@ joined_data.head()
       <td>162022.19</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>CA-2017-158841</td>
       <td>Technology</td>
       <td>Machines</td>
@@ -765,7 +765,7 @@ joined_data.head()
       <td>162022.19</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>CA-2015-139892</td>
       <td>Technology</td>
       <td>Machines</td>
@@ -776,7 +776,7 @@ joined_data.head()
       <td>162022.19</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>US-2018-168116</td>
       <td>Technology</td>
       <td>Machines</td>
@@ -788,7 +788,7 @@ joined_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ```python
 left_join = pd.merge(
@@ -799,25 +799,25 @@ left_join.drop(columns="_merge", inplace=True)
 left_join.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Order ID</th>
-      <th>Category</th>
-      <th>Sub-Cat</th>
-      <th>Product</th>
-      <th>Sales</th>
-      <th>Quantity</th>
-      <th>Total Sales</th>
-      <th>Sales by Sub-Cat</th>
+      <td></td>
+      <td>Order ID</td>
+      <td>Category</td>
+      <td>Sub-Cat</td>
+      <td>Product</td>
+      <td>Sales</td>
+      <td>Quantity</td>
+      <td>Total Sales</td>
+      <td>Sales by Sub-Cat</td>
     </tr>
   </thead>
   <tbody>
   </tbody>
 </table>
-</div>
+
 
 ## Union tool
 ![Union tool](../images/python-for-alteryx-users/union.png)
@@ -827,24 +827,24 @@ unioned_data = joined_data.append(sales_under_1000)
 unioned_data.head()
 ```
 
-<div class="overflow-x-auto relative">
+
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Category</th>
-      <th>Order ID</th>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Sales</th>
-      <th>Sales by Sub-Cat</th>
-      <th>Sub-Cat</th>
-      <th>Total Sales</th>
+      <td></td>
+      <td>Category</td>
+      <td>Order ID</td>
+      <td>Product</td>
+      <td>Quantity</td>
+      <td>Sales</td>
+      <td>Sales by Sub-Cat</td>
+      <td>Sub-Cat</td>
+      <td>Total Sales</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <td>0</td>
       <td>Technology</td>
       <td>CA-2015-145317</td>
       <td>Cisco TelePresence System EX90 Videoconferenci...</td>
@@ -855,7 +855,7 @@ unioned_data.head()
       <td>135830.880</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
       <td>Technology</td>
       <td>US-2017-107440</td>
       <td>3D Systems Cube Printer, 2nd Generation, Magenta</td>
@@ -866,7 +866,7 @@ unioned_data.head()
       <td>63699.510</td>
     </tr>
     <tr>
-      <th>2</th>
+      <td>2</td>
       <td>Technology</td>
       <td>CA-2017-158841</td>
       <td>HP Designjet T520 Inkjet Large Format Printer ...</td>
@@ -877,7 +877,7 @@ unioned_data.head()
       <td>43749.750</td>
     </tr>
     <tr>
-      <th>3</th>
+      <td>3</td>
       <td>Technology</td>
       <td>CA-2015-139892</td>
       <td>Lexmark MX611dhe Monochrome Laser Printer</td>
@@ -888,7 +888,7 @@ unioned_data.head()
       <td>65279.616</td>
     </tr>
     <tr>
-      <th>4</th>
+      <td>4</td>
       <td>Technology</td>
       <td>US-2018-168116</td>
       <td>Cubify CubeX 3D Printer Triple Head Print</td>
@@ -900,7 +900,7 @@ unioned_data.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 ## Output tool
 ![Output tool](../images/python-for-alteryx-users/output.png)
