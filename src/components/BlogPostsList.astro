@@ -9,13 +9,13 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
   <ul class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
     {posts.map((post) => (
       <li class="lg:flex">
-        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src={post.frontmatter.heroImage} alt="">
+        <img class="background-cover w-full h-56 rounded-lg md:h-70 lg:w-64 lg:h-full" src={post.frontmatter.heroImage} alt="hero-image">
 
         <div class="flex flex-col justify-between py-6 lg:mx-6">
           <a class="text-xl font-semibold hover:underline" href={post.url}>
             {post.frontmatter.title}
           </a>
-          <time datetime={post.frontmatter.pubDate}>
+          <time class="mt-3" datetime={post.frontmatter.pubDate}>
             {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
               year: 'numeric',
               month: 'long',
