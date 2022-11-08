@@ -8,13 +8,14 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
 <div class="container px-6 py-10 mx-auto">
   <ul class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
     {posts.map((post) => (
+      <a class="hover:underline" href={post.url}>
       <li class="lg:flex">
         <img class="background-cover w-full h-56 rounded-lg md:h-70 lg:w-64 lg:h-full" src={post.frontmatter.heroImage} alt="hero-image">
 
         <div class="flex flex-col justify-between py-6 lg:mx-6">
-          <a class="text-xl font-semibold hover:underline" href={post.url}>
+          <p class="text-xl text-[#3F4F67] dark:white font-bold">
             {post.frontmatter.title}
-          </a>
+          </p>
           <time class="mt-3" datetime={post.frontmatter.pubDate}>
             {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
               year: 'numeric',
@@ -24,6 +25,7 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
           </time>
         </div>
       </li>
+      </a>
     ))}
   </ul>
 </div>
