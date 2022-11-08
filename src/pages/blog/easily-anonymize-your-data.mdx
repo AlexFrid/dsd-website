@@ -61,7 +61,7 @@ an.fake_dates("Date")
 an.fake_decimal_numbers("Fraction")
 df.head()
 ```
-
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -158,6 +158,7 @@ df.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 Example 2 - method chaining
@@ -174,6 +175,7 @@ fake_df = (
 fake_df.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -270,6 +272,7 @@ fake_df.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 Example 4 - for multiple columns
@@ -280,6 +283,7 @@ for column in column_list:
      an.fake_categories(column)
 df.head()
 ```
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -376,6 +380,7 @@ df.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 Example 5 - grouping
@@ -386,6 +391,7 @@ df2 = pd.DataFrame(data=d2)
 an = anonymize(df2)
 df2.head()
 ```
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -417,6 +423,7 @@ df2.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 Without grouping - relative relationships lost when generating fake data
@@ -424,6 +431,7 @@ an.fake_decimal_numbers("number")
 df2.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -460,6 +468,7 @@ df2.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 With grouping - relative relationships remain the same
@@ -467,6 +476,7 @@ an.fake_decimal_numbers("number", "category")
 df2.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -503,6 +513,7 @@ df2.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Alteryx usage
 

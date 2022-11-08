@@ -16,6 +16,30 @@ div {
 	@apply text-gray-800 dark:text-white
 }
 
+
+ /* Handle Overflow With Table Output */
+
+table {
+  display: block !important;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 75%;
+  border:none;
+
+}
+
+th {
+	@apply py-3 px-6
+  }
+
+td {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    max-width: 15em;
+	@apply py-4 px-6
+  }
+
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css

@@ -24,7 +24,7 @@ text_input = pd.DataFrame(
 )
 text_input
 ```
-
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -51,6 +51,7 @@ text_input
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Input data
 ![Input data](../images/python-for-alteryx-users/normal-input.png)
@@ -61,7 +62,7 @@ import pandas as pd
 input_data = pd.read_csv("https://query.data.world/s/whbjtalht4sigazly6hdnnb5ynqald")
 input_data.head()
 ```
-
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -206,6 +207,7 @@ input_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Select tool
 ![Select tool](../images/python-for-alteryx-users/select.png)
@@ -221,9 +223,10 @@ selected_data = (
 )
 selected_data.head()
 ```
-<table border="1" class="dataframe">
+<div class="overflow-x-auto relative">
+<table>
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
       <th>Order ID</th>
       <th>Category</th>
@@ -281,6 +284,7 @@ selected_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Formula tool
 ![Formula tool](../images/python-for-alteryx-users/formula.png)
@@ -290,6 +294,7 @@ selected_data["Total Sales"] = selected_data["Sales"] * selected_data["Quantity"
 selected_data.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -356,6 +361,7 @@ selected_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Filter tool
 ![Filter tool](../images/python-for-alteryx-users/filter.png)
@@ -369,6 +375,7 @@ sales_under_1000 = selected_data[selected_data["Sales"] < 1000]
 
 filtered_data.head()
 ```
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -435,11 +442,13 @@ filtered_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 sales_under_1000.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -506,6 +515,7 @@ sales_under_1000.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Sort tool
 ![Sort tool](../images/python-for-alteryx-users/sort.png)
@@ -515,6 +525,7 @@ sorted_data = filtered_data.sort_values(by="Sales", ascending=False)
 sorted_data.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -581,6 +592,7 @@ sorted_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Summarize tool
 ![Summarize tool](../images/python-for-alteryx-users/summarize.png)
@@ -595,6 +607,7 @@ summarized_data = (
 summarized_data.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -637,6 +650,7 @@ summarized_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 summarized_data_alternative = sorted_data.groupby(["Category", "Sub-Cat"]).agg(
@@ -645,6 +659,7 @@ summarized_data_alternative = sorted_data.groupby(["Category", "Sub-Cat"]).agg(
 summarized_data_alternative.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -687,6 +702,7 @@ summarized_data_alternative.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Join tool
 ![Join tool](../images/python-for-alteryx-users/join.png)
@@ -699,6 +715,7 @@ joined_data = pd.merge(
 joined_data.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -771,6 +788,7 @@ joined_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ```python
 left_join = pd.merge(
@@ -781,6 +799,7 @@ left_join.drop(columns="_merge", inplace=True)
 left_join.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -798,6 +817,7 @@ left_join.head()
   <tbody>
   </tbody>
 </table>
+</div>
 
 ## Union tool
 ![Union tool](../images/python-for-alteryx-users/union.png)
@@ -807,6 +827,7 @@ unioned_data = joined_data.append(sales_under_1000)
 unioned_data.head()
 ```
 
+<div class="overflow-x-auto relative">
 <table>
   <thead>
     <tr>
@@ -879,6 +900,7 @@ unioned_data.head()
     </tr>
   </tbody>
 </table>
+</div>
 
 ## Output tool
 ![Output tool](../images/python-for-alteryx-users/output.png)
