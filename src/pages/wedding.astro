@@ -1,13 +1,13 @@
 ---
 import '../styles/wedding/bootstrap.min.css';
 import '../styles/wedding/style.css';
+import { YouTube } from '@astro-community/astro-embed-youtube';
 ---
 
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<!-- Page Title -->
 	<title>Xiaocen and Alexander Wedding</title>
@@ -31,7 +31,7 @@ import '../styles/wedding/style.css';
 				<div class="row">
                     <div class="relative z-10 hero-font text-white text-7xl lg:text-[60pt]  my-20">Xiaocen & Alexander wedding</div>
                         <div class="relative z-10 mt-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart z-10 absolute right-0 left-0 w-1/3 md:-top-20 -top-8  stroke-purple-300 mx-auto"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart z-10 absolute right-0 left-0 w-1/3 md:-top-20 -top-8  stroke-purple-300 mx-auto"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                             <img class="w-1/3 h-1/6 mx-auto rounded-full z-0 relative" src="../images/wedding/engagement-118.jpg" alt="XA">
                             <a href="https://forms.gle/TLkHj92mXbMaMsQ7A">
                                 <button class="hero-font mt-5 px-10 py-5 pl-20 pr-20 text-6xl tracking-wide text-white capitalize transition-colors duration-300 transform bg-purple-400 rounded-lg hover:bg-violet-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
@@ -50,7 +50,7 @@ import '../styles/wedding/style.css';
 		<section id="ourstory" class="mb-20">
 
 				<div class="grid grid-cols-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D8B4FE" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart z-10 absolute right-0 left-0 w-1/5 top-96  stroke-purple-300 mx-auto"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>		
+                    <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#D8B4FE" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart z-10 absolute right-0 left-0 w-1/5 top-96  stroke-purple-300 mx-auto"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>		
 					<div class="mx-auto w-full">
                         <h3 class="story-elem text-center">Xiaocen Wang<small>13.06.1988</small></h3>
 						<img src="../images/wedding/engagement-1199.jpg" alt="Xiaocen" />
@@ -78,17 +78,16 @@ import '../styles/wedding/style.css';
 		
 		
 		<!-- BEGIN TIMELINE SECTION -->
-		<section id="loveline" class="divider-bottom-2 divider-pattern divider-bg-color mt-20">
+		<section id="loveline" class=" divider-pattern divider-bg-color mt-20">
 			<div class="container">
 				<div class="row">
 				</div>
 				<div class="row">
 					<div class="timeline">
                         <h1 class="section-title bg-white">Our Love Story...</h1>
-						<div class="year"><span class="ribbon">2020<br>  
-                        
-                        </span> </div>
-						
+						<div class="year"><span class="ribbon">2020<br> </span> </div>
+                        <YouTube id="ZiwGpZTYia4" class="mx-auto" />
+
 						<div class="event_left">
 							<div class="event_panel">
 								<h3>04 Oct: First date</h3>
@@ -98,6 +97,7 @@ import '../styles/wedding/style.css';
 						<div class="event_right">
 							<div class="event_panel">
 								<h3>07 Nov: First picture together</h3>
+                                <img class="object-cover w-full mx-auto rounded-md" src="../images/wedding/first-photo.jpg" alt="First photo">
 							</div>
 						</div>
 						
@@ -107,8 +107,10 @@ import '../styles/wedding/style.css';
 							</div>
 						</div>
 						
-						<div class="year"><span class="ribbon">2021</span></div>
-						
+						<div class="year"><span class="ribbon">2021 <br>
+                            </span></div>
+                            <YouTube id="u2bTHx7gMHs" class="mx-auto" />
+
 						<div class="event_left" >
 							<div class="event_panel">
 								<h3>24 Sept: First international trip - Iceland</h3>
@@ -117,7 +119,7 @@ import '../styles/wedding/style.css';
 						
 						<div class="event_right" >
 							<div class="event_panel">
-								<h3>17 Dec: See Alexanders family in Norway</h3>
+								<h3>17 Dec: See Alexander's family in Norway</h3>
 								</div>
 						</div>
 
@@ -132,6 +134,7 @@ import '../styles/wedding/style.css';
 						<div class="event_right" >
 							<div class="event_panel">
 								<h3>20 Aug: Got Engaged</h3>
+                                <img class="object-cover w-full mx-auto rounded-md" src="../images/wedding/engagement-1041.jpg" alt="proposal">
 								</div>
 						</div>
 
@@ -146,12 +149,11 @@ import '../styles/wedding/style.css';
 		<!-- END TIMELINE SECTION -->
 		
 		<!-- BEGIN THE WEDDING SECTION -->
-		<section id="location" class="bg-color pattern">
+		<section id="location" class="">
 			
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h1 class="section-title">The Wedding location</h1>
 					</div>
                     <div class="center">
                         <a href="https://forms.gle/TLkHj92mXbMaMsQ7A">
@@ -161,7 +163,7 @@ import '../styles/wedding/style.css';
                     </div>
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="location-info timeline">
-							<a href="http://maps.google.com/?q=Kirkja+Sj%C3%B6unda+Dags+A%C3%B0ventista+Tjarnarsk%C3%B3li%2C+Mi%C3%B0b%C3%A6r%2C+Ing%C3%B3lfsstr%C3%A6ti+19+Reykjavik+101+Iceland+">
+							<a href="https://maps.google.com/?q=Kirkja+Sj%C3%B6unda+Dags+A%C3%B0ventista+Tjarnarsk%C3%B3li%2C+Mi%C3%B0b%C3%A6r%2C+Ing%C3%B3lfsstr%C3%A6ti+19+Reykjavik+101+Iceland+">
                             <div class="event_left" >
 								<div class="event_panel">
 									<div class="info-left">
@@ -175,7 +177,7 @@ import '../styles/wedding/style.css';
 								</div>
 							</div>
                             </a>
-							<a href="http://maps.google.com/?q=Su%C3%B0urhl%C3%AD%C3%B0arsk%C3%B3li+Su%C3%B0urhl%C3%AD%C3%B0+36%2C+Reykjav%C3%ADk%2C+Iceland+Reykjav%C3%ADk+106+Iceland+">
+							<a href="https://maps.google.com/?q=Su%C3%B0urhl%C3%AD%C3%B0arsk%C3%B3li+Su%C3%B0urhl%C3%AD%C3%B0+36%2C+Reykjav%C3%ADk%2C+Iceland+Reykjav%C3%ADk+106+Iceland+">
 							<div class="event_right">
 								<div class="event_panel">
 									<div class="info-left">
