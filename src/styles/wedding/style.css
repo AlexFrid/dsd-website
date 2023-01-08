@@ -488,7 +488,6 @@ textarea {
 }
 section {
   position: relative;
-  padding: 70px 0;
   background-color: #ffffff;
   z-index: 0;
 }
@@ -675,7 +674,6 @@ fieldset[disabled] .btn-default2.active {
 .btn-color.focus {
   color: rgba(255, 255, 255, 0.65);
   background-color: #ad9fb3;
-  border-color: rgba(255, 255, 255, 0.65);
 }
 .btn-color:hover,
 .btn-color:active,
@@ -683,7 +681,6 @@ fieldset[disabled] .btn-default2.active {
 .open > .dropdown-toggle.btn-color {
   color: #fff;
   background-color: #ad9fb3;
-  border-color: #fff;
 }
 .btn-color:active,
 .btn-color.active,
@@ -709,7 +706,6 @@ fieldset[disabled] .btn-color:active,
 .btn-color[disabled].active,
 fieldset[disabled] .btn-color.active {
   background-color: #ffffff;
-  border-color: #cccccc;
 }
 .btn-danger,
 .btn-danger:hover,
@@ -737,13 +733,13 @@ fieldset[disabled] .btn-color.active {
   padding: 5px 16px;
   margin: 0 34px;
   position: relative;
-  color: rgba(173, 159, 179, 0.65);
+  color: #ad9fb3;
   text-align: center;
   background: #fff;
   display: inline-block;
   font-size: 28pt;
   line-height: 28pt;
-  border-color: #ad9fb3;
+
 }
 .btn.ribbon::before,
 .btn.ribbon::after {
@@ -751,7 +747,6 @@ fieldset[disabled] .btn-color.active {
   display: block;
   position: absolute;
   bottom: -12px;
-  z-index: -1;
   font-family: "lilac" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -792,8 +787,7 @@ fieldset[disabled] .btn-color.active {
 }
 .btn.ribbon.btn-color {
   background: #ad9fb3;
-  border-color: #fff;
-  color: rgba(255, 255, 255, 0.65);
+  color: #fff;
 }
 .btn.ribbon.btn-color::before,
 .btn.ribbon.btn-color::after {
@@ -867,7 +861,7 @@ fieldset[disabled] .btn.ribbon.active {
   background-image: url('../../../images/wedding/pattern.png');
 }
 .divider-bottom-1 {
-  padding-bottom: 290px !important;
+  padding-bottom: 1px !important;
 }
 .divider-bottom-1::after {
   content: "";
@@ -1270,7 +1264,7 @@ fieldset[disabled] .btn.ribbon.active {
   padding-bottom: 0px;
   min-height: 200px;
   background: transparent;
-  padding-top: 200px;
+  padding-top: 20px;
   text-align: center;
 }
 #home::before {
@@ -1290,7 +1284,6 @@ fieldset[disabled] .btn.ribbon.active {
   font-family: 'Dancing Script', cursive;
   font-size: 90pt;
   font-weight: bold;
-  margin-bottom: 90px;
   position: relative;
   min-height: 55px;
 }
@@ -1353,7 +1346,6 @@ fieldset[disabled] .btn.ribbon.active {
   font-family: 'Open Sans Condensed', sans-serif;
   min-height: 55px;
   text-transform: uppercase;
-  margin-top: 68px;
 }
 .hero-text {
   color: #fff;
@@ -1678,7 +1670,6 @@ fieldset[disabled] .btn.ribbon.active {
 ================================================== */
 .timeline {
   position: relative;
-  padding-top: 20px;
 }
 .timeline::before {
   content: "";
@@ -4703,7 +4694,7 @@ div.dark_square #pp_full_res .pp_inline {
 /* Retina Images ***************************************************/
 @media (min-resolution: 144dpi) {
   .divider-bottom-1 {
-    padding-bottom: 580px;
+    padding-bottom: 10px;
   }
   .divider-bottom-1::after {
     height: 482px;
