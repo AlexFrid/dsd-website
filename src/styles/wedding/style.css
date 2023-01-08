@@ -50,23 +50,22 @@ h6 {
   text-rendering: optimizelegibility;
 }
 h1 {
-  font-size: 42px !important;
+  font-size: 42px;
   font-family: 'Dancing Script', cursive;
 }
 h2 {
-  font-size: 28pt !important;
+  font-size: 28pt;
   font-weight: 300;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
 }
 h3 {
-  font-size: 25pt !important;
   font-weight: 300;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
 }
 h4 {
-  font-size: 22pt !important;
+  font-size: 22pt;
   font-weight: 300;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
@@ -1352,7 +1351,7 @@ fieldset[disabled] .btn.ribbon.active {
 }
 .hero-text {
   color: #fff;
-  font-size: 32pt;
+  font-size: 50pt;
   font-family: 'Dancing Script', cursive;
   min-height: 64px;
   line-height: 1;
@@ -1505,62 +1504,14 @@ fieldset[disabled] .btn.ribbon.active {
 }
 /* #OUR STORY
 ================================================== */
+
 .story-elem {
-  position: relative;
-  margin-top: 50px;
-}
-.story-elem .image {
-  position: relative;
-  width: 100%;
-}
-.story-elem .image img {
-  width: 100%;
-}
-.story-elem .image .hover-info {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border: 0px solid transparent;
-  background-color: rgba(173, 159, 179, 0.7);
-  text-align: center;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  -webkit-box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.5);
-}
-.story-elem .image .hover-info .sn-icons {
-  float: none;
-  position: relative;
-  top: 50%;
-  margin-top: -23px;
-  padding: 0;
-}
-.story-elem .image .hover-info .sn-icons a {
-  color: #fff !important;
-  border-color: #fff;
-}
-.story-elem .image:hover .hover-info {
-  border-width: 15px;
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-}
-.story-elem h3 {
   padding: 15px 0 20px;
   margin: 15px 4%;
   position: relative;
   border-bottom: 1px solid rgba(173, 159, 179, 0.5);
 }
-.story-elem h3::after {
+.story-elem ::after {
   content: "";
   width: 22%;
   height: 5px;
@@ -1577,18 +1528,12 @@ fieldset[disabled] .btn.ribbon.active {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-.story-elem h3 small {
+.story-elem  small {
   display: block;
   color: #adb1b5;
   font-size: 17pt;
 }
-.story-elem:hover h3::after {
-  width: 32%;
-}
-.story-elem p {
-  padding: 30px 4% 25px;
-  width: 100%;
-}
+
 .balloon-left,
 .balloon-right {
   position: absolute;
