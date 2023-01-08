@@ -1511,23 +1511,7 @@ fieldset[disabled] .btn.ribbon.active {
   position: relative;
   border-bottom: 1px solid rgba(173, 159, 179, 0.5);
 }
-.story-elem ::after {
-  content: "";
-  width: 22%;
-  height: 5px;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  background-color: #ad9fb3;
-  -webkit-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
-  -webkit-transition: width 0.3s;
-  -moz-transition: width 0.3s;
-  -ms-transition: width 0.3s;
-  -o-transition: width 0.3s;
-  transition: width 0.3s;
-}
+
 .story-elem  small {
   display: block;
   color: #adb1b5;
