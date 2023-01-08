@@ -57,19 +57,19 @@ h2 {
   font-size: 28pt !important;
   font-weight: 300;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 h3 {
   font-size: 25pt !important;
   font-weight: 300;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 h4 {
   font-size: 22pt !important;
   font-weight: 300;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 h5 {
   font-size: 12pt;
@@ -563,7 +563,7 @@ h2.section-title {
   padding: 6px 13px;
   font-size: 20pt;
   border: 3px solid transparent;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -990,7 +990,7 @@ fieldset[disabled] .btn.ribbon.active {
   color: #73777b;
   line-height: 80px;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16pt;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -1038,7 +1038,7 @@ fieldset[disabled] .btn.ribbon.active {
   display: block;
   line-height: 1;
   padding: 12px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -1277,6 +1277,11 @@ fieldset[disabled] .btn.ribbon.active {
   -moz-opacity: 0.85;
   opacity: 0.85;
 }
+
+.hero-font {
+  font-family: 'Dancing Script', cursive;
+}
+
 .hero-title {
   color: #fff;
   font-family: 'Dancing Script', cursive;
@@ -1341,7 +1346,7 @@ fieldset[disabled] .btn.ribbon.active {
 .hero-subtitle {
   color: #ad9fb3;
   font-size: 62pt;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-height: 55px;
   text-transform: uppercase;
 }
@@ -1436,7 +1441,7 @@ fieldset[disabled] .btn.ribbon.active {
 }
 .countdown > div {
   display: inline-block;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
   text-align: center;
   line-height: 1;
@@ -1711,7 +1716,7 @@ fieldset[disabled] .btn.ribbon.active {
   display: inline-block;
   font-size: 28pt;
   line-height: 28pt;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   border: 3px solid #ad9fb3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1735,14 +1740,7 @@ fieldset[disabled] .btn.ribbon.active {
   -moz-osx-font-smoothing: grayscale;
   font-size: 44pt;
 }
-.timeline .year .ribbon::before {
-  content: "e";
-  left: -38px;
-}
-.timeline .year .ribbon::after {
-  content: "f";
-  right: -38px;
-}
+
 .timeline .event_left,
 .timeline .event_right {
   clear: left;
@@ -2052,7 +2050,7 @@ fieldset[disabled] .btn.ribbon.active {
   font-size: 27pt;
   font-weight: 300;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #ad9fb3;
   margin-top: 15px;
 }
@@ -2085,7 +2083,7 @@ fieldset[disabled] .btn.ribbon.active {
   z-index: -1;
 }
 .invite .invite_authors {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 110pt;
   line-height: 1;
   text-transform: uppercase;
@@ -2111,7 +2109,7 @@ fieldset[disabled] .btn.ribbon.active {
   float: left;
   display: block;
   padding-left: 48px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 40pt;
   line-height: 1;
   text-transform: uppercase;
@@ -2856,7 +2854,7 @@ fieldset[disabled] .btn.ribbon.active {
   display: inline-block;
   font-size: 20pt;
   line-height: 28pt;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   border: 3px solid #ad9fb3;
   text-transform: uppercase;
   -webkit-border-radius: 4px;
@@ -3649,7 +3647,7 @@ fieldset[disabled] .btn.ribbon.active {
   color: #ad9fb3;
   height: auto;
   margin-bottom: 20px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15pt;
   padding: 12px 15px;
 }
@@ -4429,7 +4427,7 @@ div.dark_square #pp_full_res .pp_inline {
 }
 /* #Media Queries
 ================================================== */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media  (max-width: 1199px) {
   .location-info .event_left .event_panel .info-left,
   .location-info .event_right .event_panel .info-left {
     width: 100%;
