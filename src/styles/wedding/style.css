@@ -2195,7 +2195,17 @@ fieldset[disabled] .btn.ribbon.active {
 .location-info .event_right .event_panel::before {
   top: 45px;
 }
-
+.location-info .event_left .event_panel .info-left,
+.location-info .event_right .event_panel .info-left {
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 18px;
+}
+.location-info .event_left .event_panel .info-right,
+.location-info .event_right .event_panel .info-right {
+  border-top: 1px solid rgba(173, 177, 181, 0.5);
+  padding-top: 18px;
+}
 .location-info .event_left .event_panel .info-right p,
 .location-info .event_right .event_panel .info-right p {
   color: #73777b;
