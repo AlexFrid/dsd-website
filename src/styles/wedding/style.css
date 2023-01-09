@@ -2195,21 +2195,7 @@ fieldset[disabled] .btn.ribbon.active {
 .location-info .event_right .event_panel::before {
   top: 45px;
 }
-.location-info .event_left .event_panel .info-left,
-.location-info .event_right .event_panel .info-left {
-  text-align: center;
-  width: 28%;
-  float: left;
-  padding-top: 8px;
-  padding-right: 18px;
-}
-.location-info .event_left .event_panel .info-right,
-.location-info .event_right .event_panel .info-right {
-  width: 72%;
-  float: left;
-  border-left: 1px solid rgba(173, 177, 181, 0.5);
-  padding-left: 18px;
-}
+
 .location-info .event_left .event_panel .info-right p,
 .location-info .event_right .event_panel .info-right p {
   color: #73777b;
@@ -4575,18 +4561,6 @@ div.dark_square #pp_full_res .pp_inline {
   }
   .timeline_footer .punchline span {
     font-size: 50pt;
-  }
-  .location-info .event_left .event_panel .info-left,
-  .location-info .event_right .event_panel .info-left {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .location-info .event_left .event_panel .info-right,
-  .location-info .event_right .event_panel .info-right {
-    width: 100%;
-    border-left: 0;
-    border-top: 1px solid rgba(173, 159, 179, 0.5);
-    padding-top: 15px;
   }
   .gallery-desc {
     font-size: 18pt;
